@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Brennan's Recipe Book</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="h1T">Brennan's Recipe Book</h1>
+        <section class="slide" id="slide1">
+            <div id="numCont">
+                <input type="number" placeholder="How many days are you planning for?" id="dayI"><!--
+                --><button onclick="daySlide()" id="daySlide">Go</button>
+            </div>
+        </section>
+        
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

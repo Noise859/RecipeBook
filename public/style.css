@@ -1,0 +1,112 @@
+/* COLOR PALETTE
+Gunmetal - #292F36
+Platinum - #DADDD8
+Bittersweet - #EF5B5B
+Celestial Blue - #4D9DE0
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    background-color: #292F36;
+    color: #DADDD8;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, h1, h2, h3, h4, h5, h6, p {
+  overflow:hidden;
+  display: block;
+  margin:0;
+  padding:0;
+}
+
+#h1T {
+    font-size: 72px;
+    display: table;
+    padding-top: 25vh;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: all .5s ease;
+}
+
+.slide {
+    width:100%;
+    height: 100vh;
+    display: block;
+}
+
+#dayI {
+    border: 1px solid #EF5B5B;
+    background-color: rgba(255,255,255,.1);
+    width: 500px;
+    padding: 15px 20px;
+    font-size: 24px;
+    box-sizing: border-box;
+    color: #DADDD8;
+    margin: 0;
+}
+
+#dayI::placeholder {
+    color: #DADDD8;
+    font-weight: 300;
+}
+
+#daySlide {
+    background-color: #EF5B5B;
+    color: #DADDD8;
+    border: none;
+    margin: 0;
+    font-size: 24px;
+    padding: 16px 30px;
+    cursor: pointer;
+}
+
+#numCont {
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 38vh;
+}
