@@ -10,6 +10,10 @@
     </head>
     <body>
         <section class="slide" id="slide1">
+            <div id="backgroundImage">
+                <img src="images/bkg3.jpg">
+            </div>
+            
             <h1 id="h1T">Brennan's Recipe Book</h1>
             <div id="numCont">
                 <input type="number" placeholder="How many meals are you planning?" id="dayI" min="1" max="10"><!--
@@ -47,7 +51,7 @@
                 <ul>
                     <li class="backButCont"><button onclick="backSlide2()" id="backSlide2"><img width="80" src="images/left-arrow.svg" alt="Left arrow"></button></li>
                     <li class="titleCont"><h2>Brennan's Recipe Book</h2></li>
-                    <li class="addRecipeCont"><button onclick="startOver()" class="addRecipe">Start Over</button></li>
+                    <li class="addRecipeCont"><button onclick="location.reload();" class="addRecipe">Start Over</button></li>
                 </ul>
             </nav>
         </section>

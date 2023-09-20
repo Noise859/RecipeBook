@@ -1,4 +1,4 @@
-var socket = io.connect("http:/127.0.0.1:7777");
+var socket = io.connect("128.101.166.39:7777");
 
 function daySlide(){
     if(document.getElementById('dayI').value != null && document.getElementById('dayI').value > 0 && document.getElementById('dayI').value <= 42) {
