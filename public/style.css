@@ -5,6 +5,11 @@ Bittersweet - #EF5B5B
 Celestial Blue - #4D9DE0
 */
 
+:root {
+    --main-bg-color: #292F36;
+    --main-text-color: #DADDD8;
+    --accent-color: #EF5B5B;
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -33,8 +38,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-    background-color: #292F36;
-    color: #DADDD8;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
 }
@@ -63,50 +68,170 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 #h1T {
     font-size: 72px;
-    display: table;
-    padding-top: 25vh;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    transition: all .5s ease;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top:30vh;
 }
 
 .slide {
     width:100%;
-    height: 100vh;
+    min-height: 100vh;
     display: block;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    transition: margin-left .5s ease;
+}
+
+#slide1 {
+    z-index:1;
+}
+#slide2 {
+    margin-left: 100vw;
+    z-index: 2;
+}
+
+#slide3 {
+    margin-left:200vw;
+    z-index: 3;
 }
 
 #dayI {
-    border: 1px solid #EF5B5B;
+    border: 1px solid var(--accent-color);
     background-color: rgba(255,255,255,.1);
     width: 500px;
     padding: 15px 20px;
     font-size: 24px;
     box-sizing: border-box;
-    color: #DADDD8;
+    color: var(--main-text-color);
     margin: 0;
 }
 
 #dayI::placeholder {
-    color: #DADDD8;
+    color: var(--main-text-color);
     font-weight: 300;
 }
 
 #daySlide {
-    background-color: #EF5B5B;
-    color: #DADDD8;
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
     border: none;
     margin: 0;
     font-size: 24px;
     padding: 16px 30px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 #numCont {
     display: table;
     position: relative;
     margin: 0 auto;
-    padding-top: 38vh;
+    padding-top: 5vh;
+}
+
+#slide2 nav  ul {
+    display: flex;
+    list-style-type:none;
+    padding: 1vw 2vh;
+}
+
+.backButCont {
+    flex-basis: 20%;
+}
+
+.titleCont {
+    flex-basis: 60%;
+}
+
+.titleCont h2{
+    width: 100%;
+    text-align: center;
+    font-size: 56px;
+    margin-top: 1vh;
+}
+
+.addRecipeCont {
+    flex-basis: 20%;
+    padding: 1vh;
+}
+
+.addRecipeCont button{
+    float:right;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    font-size: 28px;
+    padding: 20px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.backButCont button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 30%;
+    padding: 0 10px;
+}
+
+.backButCont button:hover {
+    background-color: rgba(255,255,255,.1);
+}
+
+#recipesCont {
+    margin-left: 10vw;
+}
+
+.addRecipe {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--main-text-color);
+    font-size: 28px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.recipeCont {
+    margin: 4vh 0;
+}
+
+.recipeList {
+    position: absolute;
+    background-color: var(--main-text-color);
+    height: 520px;
+    overflow-y: scroll;
+}
+
+.recipeList li {
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.recipeList li:hover {
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+}
+
+.recipeSearchBox {
+    font-size: 24px;
+    padding: 20px 25px;
+    background-color: transparent;
+    border: 1px solid var(--main-text-color);
+    color: var(--main-text-color);
+    width: 500px;
+}
+
+#genMeals {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--main-text-color);
+    font-size: 32px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin-left: 10vw;
+    margin-top: 3vh;
 }

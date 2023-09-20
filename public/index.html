@@ -9,16 +9,48 @@
         <link type="text/css" rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="h1T">Brennan's Recipe Book</h1>
         <section class="slide" id="slide1">
+            <h1 id="h1T">Brennan's Recipe Book</h1>
             <div id="numCont">
-                <input type="number" placeholder="How many days are you planning for?" id="dayI"><!--
+                <input type="number" placeholder="How many meals are you planning?" id="dayI" min="1" max="10"><!--
                 --><button onclick="daySlide()" id="daySlide">Go</button>
             </div>
         </section>
-        
-        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <section class="slide" id="slide2">
+            <nav>
+                <ul>
+                    <li class="backButCont"><button onclick="backSlide1()" id="backSlide1"><img width="80" src="images/left-arrow.svg" alt="Left arrow"></button></li>
+                    <li class="titleCont"><h2>Brennan's Recipe Book</h2></li>
+                    <li class="addRecipeCont"><button onclick="addRecipe()" class="addRecipe">Add New Recipe</button></li>
+                </ul>
+            </nav>
+            <section id="recipesCont">
+                <div class="recipeCont">
+                    <button onclick="addRecipe(1)" class="addRecipe">Add Day 1 Recipe</button>
+                    <div id="singleRecipeCont1" style="display: none">
+                        <input type="text" placeholder="Search Recipe" onkeyup="filterFunction()" id="recipeSearchBox">
+                        <ul id="loadRecipeCont1">
+                            <li>Lasagna</li>
+                            <li>Meatloaf</li>
+                            <li>Soup</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="recipeCont">
+                    
+                </div>
+            </section>
+            <button onclick="generateLists()" id="genMeals">Generate Meal Plan</button>
+        </section>
+        <section class="slide" id="slide3">
+            <nav>
+                <ul>
+                    <li class="backButCont"><button onclick="backSlide2()" id="backSlide2"><img width="80" src="images/left-arrow.svg" alt="Left arrow"></button></li>
+                    <li class="titleCont"><h2>Brennan's Recipe Book</h2></li>
+                    <li class="addRecipeCont"><button onclick="startOver()" class="addRecipe">Start Over</button></li>
+                </ul>
+            </nav>
+        </section>
         <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
         <script src="main.js"></script>
     </body>
